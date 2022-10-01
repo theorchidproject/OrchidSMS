@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2019 Moez Bhatti <moez.bhatti@gmail.com>
+  ~
+  ~ This file is part of QKSMS.
+  ~
+  ~ QKSMS is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ QKSMS is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with QKSMS.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/windowBackground">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/inbox"
+            style="@style/DrawerRow">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/inboxIcon"
+                style="@style/DrawerIcon"
+                android:src="@drawable/ic_inbox_black_24dp"
+                tools:tint="@color/tools_theme" />
+
+            <com.moez.QKSMS.common.widget.QkTextView
+                style="@style/DrawerText"
+                android:text="@string/drawer_inbox" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/archived"
+            style="@style/DrawerRow">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/archivedIcon"
+                style="@style/DrawerIcon"
+                android:src="@drawable/ic_archive_white_24dp"
+                tools:tint="?android:attr/textColorSecondary" />
+
+            <com.moez.QKSMS.common.widget.QkTextView
+                style="@style/DrawerText"
+                android:text="@string/drawer_archived" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/backup"
+            style="@style/DrawerRow">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                style="@style/DrawerIcon"
+                android:src="@drawable/ic_import_export_black_24dp"
+                app:tint="?android:attr/textColorSecondary" />
+
+            <com.moez.QKSMS.common.widget.QkTextView
+                style="@style/DrawerText"
+                android:text="@string/backup_title" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/scheduled"
+            style="@style/DrawerRow">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                style="@style/DrawerIcon"
+                android:src="@drawable/ic_event_black_24dp"
+                app:tint="?android:attr/textColorSecondary" />
+
+            <com.moez.QKSMS.common.widget.QkTextView
+                style="@style/DrawerText"
+                android:text="@string/drawer_scheduled" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/blocking"
+            style="@style/DrawerRow">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                style="@style/DrawerIcon"
+                android:src="@drawable/ic_block_white_24dp"
+                app:tint="?android:attr/textColorSecondary" />
+
+            <com.moez.QKSMS.common.widget.QkTextView
+                style="@style/DrawerText"
+                android:text="@string/drawer_blocking" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/settings"
+            style="@style/DrawerRow">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                style="@style/DrawerIcon"
+                android:src="@drawable/ic_settings_black_24dp"
+                app:tint="?android:attr/textColorSecondary" />
+
+            <com.moez.QKSMS.common.widget.QkTextView
+                style="@style/DrawerText"
+                android:text="@string/drawer_settings" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/help"
+            android:visibility="gone"
+            style="@style/DrawerRow">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                style="@style/DrawerIcon"
+                android:src="@drawable/ic_help_black_24dp"
+                app:tint="?android:attr/textColorSecondary" />
+
+            <com.moez.QKSMS.common.widget.QkTextView
+                style="@style/DrawerText"
+                android:text="@string/drawer_help" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</ScrollView>
